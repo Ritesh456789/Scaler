@@ -64,7 +64,7 @@ function Checkout() {
              
              <div className="flex flex-col md:flex-row gap-6">
                 <div className="flex-grow">
-                     <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+                     <form id="checkout-form" onSubmit={handleSubmit} className="flex flex-col gap-4">
                          {/* Address Section */}
                          <div className="bg-white p-4 rounded-md shadow-sm">
                              <h3 className="font-bold text-lg mb-4 text-[#c7511f]">1. Shipping Address</h3>
@@ -124,7 +124,7 @@ function Checkout() {
                 {/* Order Summary Sidebar */}
                 <div className="md:w-1/3">
                     <div className="bg-white p-4 rounded-md shadow-sm sticky top-4 border border-gray-200">
-                        <button onClick={handleSubmit} className="w-full bg-amazon_yellow border border-yellow-500 rounded-lg py-2 shadow-sm hover:bg-[#f3a847] text-sm mb-4">Place your order</button>
+                        <button form="checkout-form" type="submit" className="w-full bg-amazon_yellow border border-yellow-500 rounded-lg py-2 shadow-sm hover:bg-[#f3a847] text-sm mb-4">Place your order</button>
                         
                         <h3 className="font-bold text-lg mb-2">Order Summary</h3>
                         <div className="flex justify-between text-sm mb-1">

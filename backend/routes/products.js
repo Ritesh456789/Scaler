@@ -47,7 +47,7 @@ const products = [
         description: "Expand your PS4 gaming experience, Play anywhere Fast and easy, setup Sleek design with high capacity, 3-year manufacturer's limited warranty",
         category: "electronics",
         image: "https://m.media-amazon.com/images/I/61mtL65D4cL._AC_SX679_.jpg",
-        rating: { rate: 4.8, count: 400 }
+        rating: { rate: 4.8, count: 4 }
      },
      {
          id: 6,

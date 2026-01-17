@@ -3,8 +3,6 @@ const cors = require('cors');
 const dotenv = require('dotenv');
 const productRoutes = require('./routes/products');
 const orderRoutes = require('./routes/orders');
-// Cart will be handled via local storage on frontend roughly, but if we want server side cart:
-const cartRoutes = require('./routes/cart');
 
 dotenv.config();
 
@@ -18,7 +16,6 @@ app.use(express.json());
 // Routes
 app.use('/api/products', productRoutes);
 app.use('/api/orders', orderRoutes);
-app.use('/api/cart', cartRoutes);
 
 app.get('/', (req, res) => {
   res.send('Amazon Clone API is running');

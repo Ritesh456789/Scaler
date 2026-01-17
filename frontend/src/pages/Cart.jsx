@@ -70,8 +70,13 @@ function Cart() {
           )}
           
            {cart.length > 0 && (
-             <div className="text-right text-lg py-2">
-                Subtotal ({totalItems} items): <span className="font-bold">${total.toFixed(2)}</span>
+             <div className="flex justify-between items-center py-2">
+                <Link to="/" className="text-sm text-blue-600 hover:underline border border-blue-600 px-3 py-1 rounded-md hover:bg-blue-50 transition-colors">
+                    &larr; Continue Shopping
+                </Link>
+                <div className="text-right text-lg">
+                    Subtotal ({totalItems} items): <span className="font-bold">${total.toFixed(2)}</span>
+                </div>
              </div>
            )}
         </div>

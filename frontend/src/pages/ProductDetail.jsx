@@ -71,9 +71,9 @@ function ProductDetail() {
                 <div className="text-sm">
                     <p className="font-bold">About this item</p>
                     <ul className="list-disc pl-5 mt-2 space-y-1 text-gray-700">
-                        {product.description.split('.').map((sentence, i) => 
+                        {product.description ? product.description.split('.').map((sentence, i) => 
                             sentence.trim() && <li key={i}>{sentence}.</li>
-                        )}
+                        ) : <li>No description available for this product.</li>}
                     </ul>
                 </div>
             </div>

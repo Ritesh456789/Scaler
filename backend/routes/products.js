@@ -44,6 +44,7 @@ const products = [
         id: 5,
         title: "WD 4TB Gaming Drive Works with Playstation 4 Portable External Hard Drive",
         price: 114,
+        description: "Expand your PS4 gaming experience, Play anywhere Fast and easy, setup Sleek design with high capacity, 3-year manufacturer's limited warranty",
         category: "electronics",
         image: "https://m.media-amazon.com/images/I/61mtL65D4cL._AC_SX679_.jpg",
         rating: { rate: 4.8, count: 400 }
@@ -52,6 +53,7 @@ const products = [
          id: 6,
          title: "Acer SB220Q bi 21.5 inches Full HD (1920 x 1080) IPS Ultra-Thin",
          price: 599,
+         description: "21. 5 inches Full HD (1920 x 1080) widescreen IPS display. And Radeon free sync technology. No compatibility for VESA Mount. Refresh Rate: 75Hz - Using HDMI port. Zero-frame design | ultra-thin | 4ms response time | IPS panel. Aspect ratio - 16: 9. Color Supported - 16. 7 million colors. Brightness - 250 nit. Tilt angle -5 degree to 15 degree. Horizontal viewing angle-178 degree. Vertical viewing angle-178 degree. 75 hertz",
          category: "electronics",
          image: "https://m.media-amazon.com/images/I/81QpkIctqPL._AC_SX679_.jpg",
          rating: { rate: 2.9, count: 250 }

@@ -3,8 +3,8 @@
 A fully functional e-commerce web application that replicates the core features and design of Amazon. Built with the MERN stack (utilizing mock data for simplicity without local DB setup) and styled with Tailwind CSS.
 
 ## 🚀 Live Demo
-- **Frontend (Vercel):** https://scaler-amazon-clone-frontend.vercel.app
-- **Backend (Render):** https://scaler-amazon-clone-backend.onrender.com
+🔗 https://scaler-lx85.vercel.app/
+
 
 ## 🛠 Tech Stack
 - **Frontend:** React (Vite), Tailwind CSS, Context API, React Router DOM, Axios
@@ -80,8 +80,6 @@ npm run dev
 
 **Frontend (Vercel):**
 1. Import project pointing to `frontend` folder.
-2. Add Environment Variable: `VITE_API_URL` = `https://your-backend-url.onrender.com`.
+2. Add Environment Variable.
 3. Deploy.
 
----
-*Created by [Your Name]*

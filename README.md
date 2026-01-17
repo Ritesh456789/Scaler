@@ -1,51 +1,87 @@
-# Amazon Clone Assignment
+# Full Stack Amazon Clone
 
-This is a fullstack Amazon Clone built with React.js (Vite) and Node.js/Express.
+A fully functional e-commerce web application that replicates the core features and design of Amazon. Built with the MERN stack (utilizing mock data for simplicity without local DB setup) and styled with Tailwind CSS.
 
-## Tech Stack
-- **Frontend:** React.js, Tailwind CSS, React Router DOM, Context API
+## 🚀 Live Demo
+- **Frontend (Vercel):** [Add your Vercel URL here]
+- **Backend (Render):** [Add your Render URL here]
+
+## 🛠 Tech Stack
+- **Frontend:** React (Vite), Tailwind CSS, Context API, React Router DOM, Axios
 - **Backend:** Node.js, Express.js
-- **Database:** PostgreSQL (Schema provided in `backend/schema.sql`). *Note: The application currently uses in-memory mock data to ensure functionality without requiring a local database setup during evaluation.*
+- **Deployment:** Vercel (Frontend), Render (Backend)
 
-## Features implemented
-1. **Product Listing:** Grid layout, responsive, matching Amazon's design.
-2. **Product Detail:** Image, description, price, buy/add-to-cart buttons.
-3. **Cart:** Add/Remove items, update quantity, subtotal calculation.
-4. **Checkout:** Address form, mock payment selection, order placement.
-5. **Search:** Functional search bar in header (filters in-memory products).
+## ✨ Key Features
 
-## Setup Instructions
+### 1. Product Discovery & Search
+- **Responsive Home Page:** Dynamic banner and product grid layout matching Amazon's clean aesthetics.
+- **Advanced Search:** Filter products by **Title**, **Category**, or **Description**.
+- **Category Filtering:** Dropdown menu in the search bar allows specific category searches (e.g., "Bags", "Electronics").
 
-### Backend
-1. Navigate to the backend folder:
-   ```bash
-   cd backend
-   ```
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Start the server:
-   ```bash
-   npm start
-   ```
-   Server runs on `http://localhost:5000`.
+### 2. Product Details
+- **Dynamic Routing:** Individual pages for each product (`/product/:id`).
+- **Comprehensive Info:** high-quality images, descriptions, ratings (star component), and pricing.
+- **Stock Status:** Visual indicators for stock and delivery estimates.
 
-### Frontend
-1. Navigate to the frontend folder:
-   ```bash
-   cd frontend
-   ```
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Start the development server:
-   ```bash
-   npm run dev
-   ```
-   Application runs on `http://localhost:5173`.
+### 3. Shopping Cart
+- **Persistent Storage:** Cart state is saved in `LocalStorage`, persisting across page refreshes.
+- **Functionality:** Add items, remove items, adjust quantities, and view live subtotal calculations.
+- **Notifications:** "Added to Cart" feedback on buttons.
 
-## Assumptions
-- Default user is logged in (Authentication is simulated/bypassed).
-- Database is mocked for portability and ease of testing. Schema is provided for design verification.
+### 4. Checkout Process
+- **Address Form:** Validation ensures name, mobile, and address fields are filled.
+- **Order placement:** Simulates order processing via API call.
+- **Success Screen:** Displays Order ID and confirmation upon successful submission.
+
+## 📂 Project Structure
+
+```
+amazon-clone/
+├── backend/            # Express Server
+│   ├── routes/         # API endpoints (products, orders)
+│   └── server.js       # App entry point
+│
+├── frontend/           # React Client
+│   ├── src/
+│   │   ├── components/ # Reusable UI components (Header, ProductCard)
+│   │   ├── context/    # Global State (CartContext)
+│   │   ├── pages/      # Route Pages (Home, Cart, Checkout)
+│   │   └── api.js      # API Configuration
+│   └── vercel.json     # Deployment Config
+```
+
+## 🔧 Local Setup
+
+### Prerequisites
+- Node.js installed
+
+### 1. Setup Backend
+```bash
+cd backend
+npm install
+npm start
+```
+*Server runs on port 5001.*
+
+### 2. Setup Frontend
+Open a new terminal:
+```bash
+cd frontend
+npm install
+npm run dev
+```
+*Frontend runs on port 5173.*
+
+## 🚀 Deployment Guide
+**Backend (Render):**
+1. Create a Web Service connected to the `backend` folder.
+2. Build Command: `npm install`
+3. Start Command: `node server.js`
+
+**Frontend (Vercel):**
+1. Import project pointing to `frontend` folder.
+2. Add Environment Variable: `VITE_API_URL` = `https://your-backend-url.onrender.com`.
+3. Deploy.
+
+---
+*Created by [Your Name]*

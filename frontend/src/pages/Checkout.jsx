@@ -51,6 +51,9 @@ function Checkout() {
   return (
     <div className="bg-gray-100 min-h-screen p-4">
          <div className="max-w-screen-lg mx-auto">
+             <Link to="/cart" className="text-sm text-gray-600 hover:text-black mb-4 inline-block hover:underline">
+                &larr; Back to Cart
+             </Link>
              <div className="flex items-center justify-between mb-4 border-b border-gray-300 pb-4">
                  <Link to="/">
                     <span className="text-2xl font-bold tracking-tighter cursor-pointer">amazon.in</span>

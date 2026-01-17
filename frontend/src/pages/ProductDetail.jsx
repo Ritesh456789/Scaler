@@ -3,6 +3,7 @@ import { useParams, useNavigate, Link } from "react-router-dom";
 import { useCart } from "../context/CartContext";
 import { FaStar, FaMapMarkerAlt } from "react-icons/fa";
 import axios from "axios";
+import API_URL from "../api";
 
 function ProductDetail() {
   const { id } = useParams();
@@ -14,7 +15,7 @@ function ProductDetail() {
   useEffect(() => {
      const fetchProduct = async () => {
          try {
-             const { data } = await axios.get(`http://localhost:5001/api/products/${id}`);
+             const { data } = await axios.get(`${API_URL}/api/products/${id}`);
              setProduct(data);
          } catch (error) {
              console.error("Error fetching product:", error);

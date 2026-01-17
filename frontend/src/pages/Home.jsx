@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import ProductCard from "../components/ProductCard";
 import axios from "axios";
 import { useLocation } from "react-router-dom";
+import API_URL from "../api";
 
 function Home() {
     const [products, setProducts] = useState([]);
@@ -14,7 +15,7 @@ function Home() {
                 const search = params.get("search");
                 const category = params.get("category");
 
-                let url = "http://localhost:5001/api/products";
+                let url = `${API_URL}/api/products`;
                 const queryParams = [];
                 if (search) queryParams.push(`search=${encodeURIComponent(search)}`);
                 if (category) queryParams.push(`category=${encodeURIComponent(category)}`);

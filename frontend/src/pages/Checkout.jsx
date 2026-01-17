@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useCart } from "../context/CartContext";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import API_URL from "../api";
 
 function Checkout() {
   const { cart, dispatch } = useCart();
@@ -19,7 +20,7 @@ function Checkout() {
     const shippingAddress = "123 Test St, NY"; 
     
     try {
-        const response = await axios.post('http://localhost:5001/api/orders', {
+        const response = await axios.post(`${API_URL}/api/orders`, {
             items: cart,
             totalAmount: total,
             shippingAddress
